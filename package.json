@@ -1,0 +1,33 @@
+{
+  "name": "readenjoyadmin",
+  "version": "1.0.0",
+  "description": "ReadEnjoryAdmin",
+  "main": "index.js",
+  "scripts": {
+   "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8088",
+    "dist": "set WEBPACK_ENV=online && webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitee.com:hbhey/ReadEnjoyAdmin.git"
+  },
+  "author": "HB",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^1.15.0",
+    "webpack-dev-server": "^1.16.5"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "hogan": "^1.0.2",
+    "social-share.js": "^1.0.16"
+  }
+}
