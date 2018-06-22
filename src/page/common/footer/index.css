@@ -1,0 +1,10 @@
+/**
+ * @author HB
+ * @date 2018/6/15
+ * @fileName index.css
+ * @Description:  footer css
+*/
+.footer{ position:absolute; left:0; right:0; width:100%; z-index:99}
+.footer{ height:46px; line-height:46px; bottom:0; text-align:center; color:#fff; font-size:12px; background-color:#426374}
+.footer a{color: white}
+.footer a:hover{color: #FE5F55}

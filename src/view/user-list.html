@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= require("html-loader!./layout/head-common.html")%>
+    <title>ReadEnjoy | <%= htmlWebpackPlugin.options.title%></title>
+</head>
+<body>
+<nav class="breadcrumb">
+    <i class="fa fa-home"></i> 首页 <span class="c-gray en">&gt;</span> 用户管理 <span class="c-gray en">&gt;</span> 用户列表
+    <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="fa fa-repeat"></i></a>
+</nav>
+
+<div class="page-container">
+    <!-- 搜索框 -->
+    <div class="text-c" style="text-align: right ;">
+        <input type="text" class="input-text" style="width:250px" placeholder="输入昵称、邮箱" id="" name="">
+        <button type="submit" class="btn btn-success radius" id="user-search" name=""><i class="fa fa-search"></i> 搜用户</button>
+    </div>
+    <!-- 按钮组 -->
+    <div class="cl pd-5 bg-1 bk-gray mt-20" >
+        <span class="l">
+            <a href="javascript:;" onclick="datadel()" class="btn btn-danger radius">
+                <i class="fa fa-close"></i> 批量删除
+            </a>
+            <a href="javascript:;" id="add-user" class="btn btn-primary radius">
+                <i class="fa fa-plus"></i> 添加新用户
+            </a>
+        </span>
+        <div id="user-total"></div>
+    </div>
+
+    <div class="mt-20" class="content-userList">
+        <table class="table table-border table-bordered table-hover table-bg table-sort">
+            <!-- 标题 内容 -->
+            <thead>
+            <tr class="text-c">
+                <th width="25"><input type="checkbox" name="" value=""></th>
+                <th width="20">ID</th>
+                <th width="80">头像</th>
+                <th width="50">昵称</th>
+                <th width="40">性别</th>
+                <th width="100">邮箱</th>
+                <th width="100">个性签名</th>
+                <th width="50">密保问题</th>
+                <th width="60">密保答案</th>
+                <th width="120">加入时间</th>
+                <th width="120">修改时间</th>
+                <th width="55">状态</th>
+                <th width="">操作</th>
+            </tr>
+            </thead>
+            <!-- 用户信息 -->
+            <tbody id="user-list">
+
+            </tbody>
+        </table>
+        <!--分页容器-->
+        <div class="pagination"></div>
+    </div>
+</div>
+</body>
+</html>

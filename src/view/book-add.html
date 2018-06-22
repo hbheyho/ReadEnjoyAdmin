@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= require("html-loader!./layout/head-common.html")%>
+    <title>ReadEnjoy | <%= htmlWebpackPlugin.options.title%></title>
+</head>
+<body>
+<div class="page-container">
+    <form action="" method="post" class="form form-horizontal" id="form-book-add">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>书名：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text"  placeholder="请输入书名" id="bookName" name="bookName">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>作者：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text"  placeholder="请输入作者" id="bookWriter" name="bookWriter">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">译者：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text"  placeholder="请输入译者" id="bookTranster" name="bookTranster">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>分类：</label>
+            <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+				<select class="select" id="categoryId" name="categoryId">
+
+				</select></span>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">评分：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" name="bookScore" id="bookScore" placeholder="请输入评分"  class="input-text">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>ISBN：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" name="bookIsbn" id="bookIsbn" placeholder="请输入书籍ISBN" class="input-text">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>出版社：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" name="bookPublish" id="bookPublish" placeholder="请输入出版社"  class="input-text">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>内容简介：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <textarea name="bookInfo"  id="bookInfo" cols="10" rows="10" class="textarea"  placeholder="请输入书籍内容简介" datatype="*10-100" dragonfly="true" ></textarea>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>作者简介：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <textarea name="bookWriterInformation"  id="bookWriterInformation" cols="10" rows="10" class="textarea"  placeholder="请输入作者简介" datatype="*10-100" dragonfly="true" ></textarea>
+            </div>
+        </div>
+        <div class="row c1">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>封面上传：</label>
+            <div class="fileinput fileinput-new" data-provides="fileinput"  id="bookImageUpload">
+                <!--上传之前的浏览-->
+                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 450px; max-height: 450px; margin-left: 20px;"></div>
+                <div style="margin-left: 20px;">
+                    <span class="btn btn-primary btn-file">
+                      <span class="fileinput-new" id="fileinput-new">选择文件</span>
+                      <span class="fileinput-exists">换一张</span>
+                      <input type="file" name="pic1" id="upload-img" accept="image/gif,image/jpeg,image/x-png"/>
+                    </span>
+                    <a href="javascript:;" class="btn btn-warning fileinput-exists" data-dismiss="fileinput">移除</a>
+                    <button type="button" id="upload-btn" class="btn btn-primary">提交</button>
+                    <p style="color: grey; margin-top: 7px;">请选择正确的图片格式,且大小不超过5M哦</p>
+                </div>
+            </div>
+        </div>
+        <!--错误提示-->
+        <div class="row c1" style="text-align: center;">
+            <div class="error-item" style="color: red;">
+                <span class="tips"></span>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button style="margin-left: 200px;" id="add-book-btn" class="btn btn-primary radius" type="submit">保存并提交</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= require("html-loader!./layout/head-common.html")%>
+    <title>ReadEnjoy | <%= htmlWebpackPlugin.options.title%></title>
+</head>
+<body>
+<nav class="breadcrumb">
+    <i class="fa fa-home"></i> 首页 <span class="c-gray en">&gt;</span> 书籍管理 <span class="c-gray en">&gt;</span> 书籍列表
+    <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="fa fa-repeat"></i></a>
+</nav>
+
+<div class="page-container">
+    <!-- 搜索框 -->
+    <div class="text-c" style="text-align: right;">
+        <input type="text" class="input-text" style="width:250px" placeholder="输入书名、作者、出版社" id="" name="">
+        <button type="submit" class="btn btn-success radius" id="" name=""><i class="fa fa-search"></i> 搜书籍</button>
+    </div>
+    <!-- 按钮组 -->
+    <div class="cl pd-5 bg-1 bk-gray mt-20">
+        <span class="l">
+         <a href="javascript:;"  class="btn btn-danger radius"><i class="fa fa-close"></i> 批量删除</a>
+         <a href="javascript:;"  class="btn btn-primary radius" id="add-book"><i class="fa fa-plus"></i> 添加书籍</a>
+        </span>
+        <div id="book-total"></div>
+    </div>
+
+    <div class="mt-20" class="content-bookList">
+        <table class="table table-border table-bordered table-hover table-bg table-sort">
+            <!-- 标题 内容 -->
+            <thead>
+            <tr class="text-c">
+                <th width="25"><input type="checkbox" name="bookId" value=""></th>
+                <th width="25">ID</th>
+                <th width="100">封面</th>
+                <th width="">书名</th>
+                <th width="">作者</th>
+                <th width="25">译者</th>
+                <th width="25">分类</th>
+                <th width="40">评分</th>
+                <th width="80">ISBN</th>
+                <th width="85">出版社</th>
+                <th width="40">版本数</th>
+                <th width="120">创建时间</th>
+                <th width="120">更新时间</th>
+                <th width="40">状态</th>
+                <th width="40">操作</th>
+            </tr>
+            </thead>
+            <!-- 书籍 内容 -->
+            <tbody id="book-list">
+
+            </tbody>
+        </table>
+        <!--分页容器-->
+        <div class="pagination"></div>
+    </div>
+</div>
+</body>
+</html>

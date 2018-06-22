@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= require("html-loader!./layout/head-common.html")%>
+    <title>ReadEnjoy | <%= htmlWebpackPlugin.options.title%></title>
+</head>
+<body>
+<div class="header">
+    <img src="<%= require('../image/logo-admin.png')%>" class="login-admin">
+</div>
+<div class="loginWraper">
+    <div id="loginform" class="loginBox">
+        <form class="form form-horizontal">
+            <div class="row cl">
+                <label class="form-label col-xs-3"><i class="fa fa-user fa-2x"></i></label>
+                <div class="formControls col-xs-8">
+                    <input id="email" name="email" type="text" placeholder="邮箱" class="input-text size-L">
+                </div>
+            </div>
+            <div class="row cl">
+                <label class="form-label col-xs-3"><i class="fa fa-lock fa-2x"></i></label>
+                <div class="formControls col-xs-8">
+                    <input id="password" name="password" type="password" placeholder="密码" class="input-text size-L">
+                </div>
+            </div>
+            <div class="row cl">
+                <div class="formControls col-xs-8 col-xs-offset-3">
+                    <!-- 验证码 -->
+                    <div class="verify-code">
+                        <input type="text" id="codeInput" maxlength="4" value="" placeholder="请输入验证码" />
+                        <div id="vContainer"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row cl">
+                <div class="formControls col-xs-8 col-xs-offset-3">
+                    <div class="error-item" >
+                        <p class="tips" style="margin-top: -20px;"></p>
+                    </div>
+                    <label for="online"  >
+                        <input type="checkbox" name="online" id="online" value="">
+                        使我保持登录状态</label>
+                </div>
+            </div>
+            <div class="row cl" style="margin-top: 10px !important;">
+                <div class="formControls col-xs-8 col-xs-offset-3">
+                    <input name="" type="submit"  id="loginButton" class="btn btn-success radius size-L" style="width: 90%" value="&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;">
+                </div>
+            </div>
+            <a href="#" class="admin-forget" title="点击找回密码">忘记密码？</a>
+        </form>
+    </div>
+</div>
+<%= require("html-loader!./layout/footer.html")%>
+</body>
+</html>

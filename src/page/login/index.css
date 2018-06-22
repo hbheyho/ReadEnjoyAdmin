@@ -1,0 +1,114 @@
+/**
+ * @author HB
+ * @date 2018/6/14
+ * @fileName index.css
+ * @Description: 后台用户登录 css
+*/
+html, body{
+    height:100%
+}
+body{
+    font-size:14px
+}
+
+.header{
+    position:absolute;
+    left:0;
+    right:0;
+    width:100%;
+    z-index:99;
+}
+.header{
+    top:0;
+    height:80px;
+    background: white;
+    box-shadow: 0 0 4px 0 #ccc;
+}
+.login-admin{
+    width: 40%;
+    height: auto;
+    margin-left: 3%;
+    margin-top: -20px;
+}
+
+.loginWraper{
+    position:absolute;
+    width:100%;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    z-index:1;
+    background: #f9f9f9;
+}
+.loginBox{
+    position:absolute;
+    width:617px;
+    height:330px;
+    background:white;
+    opacity: 0.8;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 0 #ccc;
+    left:50%; top:50%;
+    margin-left:-309px;
+    margin-top:-184px;
+    padding-top:38px;
+}
+
+.admin-forget{
+    position: absolute;
+    right: 15%;
+    margin-top: 10px;
+    color: #46567C;
+}
+.admin-forget:hover{
+    color: #FE5F55;
+    text-decoration: none;
+}
+/* 图片验证码 */
+.verify-code{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+#codeInput{
+    width: 40%;
+    height: 25px;
+    padding: 5px;
+    color: #696969;
+    outline: none;
+}
+
+#codeInput:hover{
+    border-color: #FE5F55;
+}
+
+#vContainer{
+    width: 40%;
+    height: 40px;
+    margin-left: 5%;
+}
+.error-item{
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+.tips{
+    color: #FE5F55;
+}
+@media (max-width:617px) {
+    .loginbox{ width:100%; position:static; margin-top:0; margin-left:0;}
+}
+.loginBox .row{margin-top:20px;}
+.loginBox .row .form-label .Hui-iconfont{ font-size:24px}
+.loginBox .input-text{ width:360px}
+
+@media (max-width:617px) {
+    .loginBox .input-text{ width:80%}
+}
+
+#span_msg{ font-size:14px; color:Red; line-height:40px; height:40px; margin-left:10px; width:160px;; float:left}
+
+

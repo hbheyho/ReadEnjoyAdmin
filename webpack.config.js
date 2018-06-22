@@ -25,9 +25,14 @@ var getHtmlConfig = function(name, title){
 // webpack config
 var config = {
     entry: {
-        'common'            : ['./src/page/common/index.js'],
-        'index'             : ['./src/page/index/index.js'],
-        'user-login'        : ['./src/page/user-login/index.js'],
+        'common': ['./src/page/common/index.js'],
+        'login': ['./src/page/login/index.js'],
+        'index': ['./src/page/index/index.js'],
+        'welcome': ['./src/page/welcome/index.js'],
+        'user-list': ['./src/page/user-list/index.js'],
+        'user-add': ['./src/page/user-add/index.js'],
+        'book-list': ['./src/page/book-list/index.js'],
+        'book-add': ['./src/page/book-add/index.js'],
     },
     output: {
         path: './dist',
@@ -62,13 +67,18 @@ var config = {
         // 把css单独打包到文件里
         new ExtractTextPlugin("css/[name].css"),
         // html模板的处理
-        new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
-        new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('login', '后台用户登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('index', '后台主页')),
+        new HtmlWebpackPlugin(getHtmlConfig('welcome', '欢迎页')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-list', '用户列表')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-add', '新增用户')),
+        new HtmlWebpackPlugin(getHtmlConfig('book-list', '书籍列表')),
+        new HtmlWebpackPlugin(getHtmlConfig('book-add', '新增书籍')),
     ]
 };
 
 if('dev' === WEBPACK_ENV){
-    config.entry.common.push('webpack-dev-server/client?http://localhost:8088/');
+    config.entry.common.push('webpack-dev-server/client?http://localhost:8089/');
 }
 
 module.exports = config;

@@ -1,0 +1,4 @@
+<option value="0">请选择</option>
+{{#categoryList}}
+<option value="{{id}}">{{name}}</option>
+{{/categoryList}}
