@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= require("html-loader!./layout/head-common.html")%>
+    <title>ReadEnjoy | <%= htmlWebpackPlugin.options.title%></title>
+</head>
+<body>
+<nav class="breadcrumb">
+	<i class="fa fa-home"></i> 首页 <span class="c-gray en">&gt;</span> 反馈管理 <span class="c-gray en">&gt;</span> 反馈列表
+	<a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="fa fa-repeat"></i></a>
+</nav>
+<div class="page-container">
+	<!-- 搜索框 -->
+    <div class="text-c" style="text-align: right;">
+        <input type="text" class="input-text" style="width:250px" placeholder="输入反馈人、反馈内容" id="" name="">
+        <button type="submit" class="btn btn-success radius" id="" name=""><i class="fa fa-search"></i> 搜反馈</button>
+    </div>
+	<!-- 按钮组 -->
+	<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="fa fa-close"></i>  批量删除</a></span> 
+		<div id="feedback-total"></div>
+	</div>
+
+	<div class="mt-20">
+		<table class="table table-border table-bordered table-hover table-bg table-sort">
+			<!-- 标题 内容 -->
+			<thead>
+				<tr class="text-c">
+					<th width="25"><input type="checkbox" name="" value=""></th>
+					<th width="60">ID</th>
+					<th width="60">反馈类型</th>
+					<th width="100">反馈人</th>
+					<th>反馈内容</th>
+					<th width="120">反馈时间</th>
+					<th width="55">状态</th>
+					<th width="60">操作</th>
+				</tr>
+			</thead>
+			<!-- 反馈列表 -->
+			<tbody id="feedback-list">
+			</tbody>
+			</table>
+        <!--分页容器-->
+        <div class="pagination"></div>
+    </div>
+</div>
+</body>
+</html>

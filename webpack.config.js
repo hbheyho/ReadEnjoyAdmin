@@ -33,6 +33,9 @@ var config = {
         'user-add': ['./src/page/user-add/index.js'],
         'book-list': ['./src/page/book-list/index.js'],
         'book-add': ['./src/page/book-add/index.js'],
+        'comment-list': ['./src/page/comment-list/index.js'],
+        'report-list': ['./src/page/report-list/index.js'],
+        'feedback-list': ['./src/page/feedback-list/index.js'],
     },
     output: {
         path: './dist',
@@ -74,6 +77,9 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-add', '新增用户')),
         new HtmlWebpackPlugin(getHtmlConfig('book-list', '书籍列表')),
         new HtmlWebpackPlugin(getHtmlConfig('book-add', '新增书籍')),
+        new HtmlWebpackPlugin(getHtmlConfig('comment-list', '评论列表')),
+        new HtmlWebpackPlugin(getHtmlConfig('report-list', '举报列表')),
+        new HtmlWebpackPlugin(getHtmlConfig('feedback-list', '反馈列表')),
     ]
 };
 

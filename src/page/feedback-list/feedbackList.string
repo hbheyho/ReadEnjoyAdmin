@@ -1,0 +1,24 @@
+{{#feedbackList}}
+<tr class="text-c">
+	<td><input type="checkbox" value="{{id}}" name="id"></td>
+	<td class="feedback-number">{{id}}</td>
+	<td>{{fbName}}</td>
+	<td>{{fbUsrname}}</td>
+	<td class="text-l" title="{{fbInfo}}">{{fbInfo}}</td>
+	<td>{{ctime}}</td>
+	{{#fbStatus}}
+     <td class="td-status"><span class="status" hidden>{{fbStatus}}</span><span class="label label-success radius">已处理</span></td>
+    {{/fbStatus}}
+    {{^fbStatus}} 
+      <td class="td-status"><span class="status" hidden>{{fbStatus}}</span><span class="label label-defaunt radius">未处理</span></td>
+    {{/fbStatus}}
+	<td class="td-manage"> 
+		<div style="display: inline-block;" class="status-content">
+          {{^fbStatus}}
+            <a style="text-decoration:none" class="change-status" href="javascript:;" title="修改状态"><i class="fa fa-cog fa-lg"></i></a>
+          {{/fbStatus}}
+        </div>
+		<a title="删除此记录" href="javascript:;"  class="ml-5 delete-feedback" style="text-decoration:none"><i class="fa fa-close fa-lg"></i></a>
+	</td>
+</tr>
+{{/feedbackList}}

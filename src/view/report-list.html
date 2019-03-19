@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= require("html-loader!./layout/head-common.html")%>
+    <title>ReadEnjoy | <%= htmlWebpackPlugin.options.title%></title>
+</head>
+<body>
+<nav class="breadcrumb">
+	<i class="fa fa-home"></i> 首页 <span class="c-gray en">&gt;</span> 书籍管理 <span class="c-gray en">&gt;</span> 举报列表 
+	<a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="fa fa-repeat"></i></a>
+</nav>
+
+<div class="page-container">
+	<!-- 搜索框 -->
+    <div class="text-c" style="text-align: right;">
+        <input type="text" class="input-text" style="width:250px" placeholder="输入书名、举报人、举报原因" id="" name="">
+        <button type="submit" class="btn btn-success radius" id="" name=""><i class="fa fa-search"></i> 搜举报</button>
+    </div>
+	<!-- 按钮组 -->
+	<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="fa fa-close"></i> 批量删除</a></span>
+		<div id="report-total"></div>
+	</div>
+
+	<div class="mt-20">
+		<table class="table table-border table-bordered table-hover table-bg table-sort">
+			<!-- 标题 内容 -->
+			<thead>
+				<tr class="text-c">
+					<th width="25"><input type="checkbox" name="reportId" value="reportId"></th>
+					<th width="60">ID</th>
+					<th>书名</th>
+					<th width="">版本名</th>
+					<th width="">上传者</th>
+					<th width="100">举报人</th>
+					<th width="150">举报原因</th>
+					<th width="120">举报时间</th>
+					<th width="55">状态</th>
+					<th width="80">操作</th>
+				</tr>
+			</thead>
+			<!-- 举报信息 -->
+			<tbody id="report-list">
+			</tbody>
+			</table>
+        <!--分页容器-->
+        <div class="pagination"></div>
+    </div>
+</div>
+</body>
+</html>

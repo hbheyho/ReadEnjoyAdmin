@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= require("html-loader!./layout/head-common.html")%>
+    <title>ReadEnjoy | <%= htmlWebpackPlugin.options.title%></title>
+</head>
+<body>
+<nav class="breadcrumb">
+	<i class="fa fa-home"></i> 首页 <span class="c-gray en">&gt;</span> 书籍管理 <span class="c-gray en">&gt;</span> 评论列表
+	<a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="fa fa-repeat"></i></a>
+</nav>
+
+<div class="page-container">
+	<!-- 搜索框 -->
+    <div class="text-c" style="text-align: right;">
+        <input type="text" class="input-text" style="width:250px" placeholder="输入书名、评论人、评论内容" id="" name="">
+        <button type="submit" class="btn btn-success radius" id="" name=""><i class="fa fa-search"></i> 搜评论</button>
+    </div>
+	<!-- 按钮组 -->
+	<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="fa fa-close"></i> 批量删除</a></span>
+		<div id="comment-total"></div>
+	</div>
+
+	<div class="mt-20">
+		<table class="table table-border table-bordered table-hover table-bg table-sort">
+			<!-- 标题 内容 -->
+			<thead>
+				<tr class="text-c">
+					<th width="25"><input type="checkbox" name="commentId" value=""></th>
+					<th width="60">ID</th>
+					<th>书名</th>
+					<th>版本名</th>
+					<th>评论人</th>
+					<th width="150" >评论内容</th>
+					<th width="120">评论时间</th>
+					<th>备注</th>
+					<th width="">操作</th>
+				</tr>
+			</thead>
+			<!-- 评论列表 -->
+			<tbody id="comment-list">
+			</tbody>
+			</table>
+        <!--分页容器-->
+        <div class="pagination"></div>
+    </div>
+</div>
+</body>
+</html>

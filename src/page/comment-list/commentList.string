@@ -1,0 +1,15 @@
+{{#commentList}}
+<tr class="text-c">
+	<td><input type="checkbox" value="{{id}}" name="id"></td>
+	<td  class="comment-number">{{id}}</td>
+	<td><a href="#">{{bookName}}</a></td>
+	<td>{{bookVersionName}}</td>
+	<td>{{commentName}}</td>
+	<td class="text-l" title="{{commentsInfo}}">{{commentsInfo}}</td>
+	<td>{{ctime}}</td>
+	<td></td>
+	<td class="td-manage"> 
+		<a title="删除此评论" href="javascript:void(0);"  class="ml-5 delete-comment" data-toggle="tooltip" data-placement="bottom" style="text-decoration:none"><i class="fa fa-close fa-lg"></i></a>
+	</td>
+</tr>
+{{/commentList}}
