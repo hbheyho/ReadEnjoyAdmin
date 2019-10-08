@@ -1,37 +1,15 @@
-# ReadEnjoyAdmin
+# 项目介绍
+ReadEnjoy为公版书共享网站实战项目,用户可以在上面分享自己所收藏的公版书书籍、下载他人书籍、在线查看书籍以及评论等等。 纯粹为个人兴趣而发起,旨在熟悉前后端分离技术, 以及加强对SSM框架的理解, 还存在很多不足之前, 敬请谅解。该项目分为三个仓库, ReadEnjoyFront、ReadEnjoyAdmin和ReadEnjoyBack。
 
-#### 项目介绍
-ReadEnjoyAdmin 前端
+#### 仓库介绍
+ReadEnjoyAdmin仓库为公版书共享网站的后台管理页面, 实现了对用户的管理、书籍管理、反馈管理、评论管理等功能,可直接运行。
 
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1. xxxx
-2. xxxx
-3. xxxx
-
+#### 技术说明
+- Hogan.js [模板引擎之hogan.js](cnblogs.com/zhangruiqi/p/8547268.html)
+- webpack *注意版本: 1.15.0,尽量使用我的版本,高版本可能会出错
+.....
 #### 使用说明
-
-1. xxxx
-2. xxxx
-3. xxxx
-
-#### 参与贡献
-
-1. Fork 本项目
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
-
-
-#### 码云特技
-
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [http://git.mydoc.io/](http://git.mydoc.io/)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+- 把项目拉到本地后,使用npm install 安装需要的模块
+- 把dist目录中的文件删除, 然后使用webpack重新编译生成需要发布的文件夹(dist)
+- 完成了使用npm run dev运行项目
+- 在浏览器输入 http://localhost:8089/ 便可看到网页显示
