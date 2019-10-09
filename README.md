@@ -12,5 +12,5 @@ ReadEnjoyAdmin仓库为公版书共享网站的后台管理页面, 实现了对�
 - 把项目拉到本地后,使用npm install 安装需要的模块
 - 把dist目录中的文件删除, 然后使用webpack重新编译生成需要发布的文件夹(dist)
 - 完成了使用npm run dev运行项目
-- 在浏览器输入 http://localhost:8089/ 便可看到网页显示
+- 在浏览器输入 http://localhost:8089/ 便可看到网页显示<br>
 **悄咪咪推荐个人Blog:** [HB's Blog](http://www.huangbin.fun)
