@@ -4,7 +4,7 @@
   "description": "ReadEnjoryAdmin",
   "main": "index.js",
   "scripts": {
-   "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8089",
+    "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8089",
     "dist": "set WEBPACK_ENV=online && webpack -p"
   },
   "repository": {
@@ -29,5 +29,6 @@
     "font-awesome": "^4.7.0",
     "hogan": "^1.0.2",
     "social-share.js": "^1.0.16"
+    
   }
 }
